@@ -10,15 +10,15 @@ meta:
 
 # Overview
 
-Form validation is one of the most difficult subjects in frontend, not only you have to deal with ensuring correct values are submitted, you must also make sure to provide a suitable UX for your users. And we also have to deal with accessability and making sure our forms are inclusive and usable for all types of our users, doing form validation by hand is painful and is a lot of work and you won't probably cover localization and cross-field validation! **The time you spend working on a custom form validation solution is better spent building your application logic**.
+Form validation is one of the most difficult subjects in front-end development. Not only do you have to deal with ensuring correct values are submitted, but you must also make sure to provide a suitable UX for your users. Front-end developers also have to deal with accessibility, making sure our forms are inclusive and usable for all types of our users. Handwritten form validation is a lot of work and it likely will not cover more complex issues such as localization and cross-field validation! **The time you spend working on a custom form validation solution is better spent building your application logic**.
 
 Most validation libraries will save you a lot of time, but `vee-validate` tackles the major pain points of form validation and addresses them in the most flexible way possible:
 
 - Ability to craft complicated UX for your users.
 - Most common validations are built-in.
-- Cross Field validation.
-- Utilities to enhance your forms accessability and styling.
-- Localization is built-in the core.
+- Cross-field validation.
+- Utilities to enhance your forms' accessibility and styling.
+- Localization built into the core.
 
 ## Getting Started
 
@@ -84,7 +84,7 @@ Vue.component('ValidationProvider', ValidationProvider);
 ```
 
 :::tip
-All Examples from now on will use the ES2015 syntax, make sure to brush up on ES2015 if you haven't already.
+All examples from now on will use the ES2015 syntax. Make sure to brush up on ES2015 if you haven't already.
 :::
 
 ### Basic Example
@@ -100,7 +100,7 @@ VeeValidate exposes a `ValidationProvider` component that allows you to validate
 
 :::danger Component Casing
 
-The examples will use Pascal case which should work fine if you are using Vue component files (SFC or `.vue` files). If you plan to use vee-validate in the browser build, you will need to use the kebab case. The previous example would then be:
+The examples will use Pascal case which should work fine if you are building a Vue application using single-file components (SFC or `.vue` files). If you plan to use vee-validate in the browser build, you will need to use the kebab case. The previous example would then look like this:
 
 ```html{1,4}
 <validation-provider rules="secret" v-slot="{ errors }">
@@ -111,9 +111,9 @@ The examples will use Pascal case which should work fine if you are using Vue co
 
 :::
 
-The `rules` prop passed to the `ValidationProvider` is the validation rules that will be checked against the input.
+The `rules` prop passed to the `ValidationProvider` contains the validation rules that will be checked against the input.
 
-To display error messages, the `ValidationProvider` exposes `errors` array through [scoped slots](https://vuejs.org/v2/guide/components-slots.html#Scoped-Slots), this array contains error messages related to that field.
+To display error messages, the `ValidationProvider` exposes an `errors` array through [scoped slots](https://vuejs.org/v2/guide/components-slots.html#Scoped-Slots). This array contains error messages related to that specific field.
 
 #### Demo
 
